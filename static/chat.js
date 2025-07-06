@@ -1,4 +1,7 @@
-const socket = io();
+const socket = io({
+  transports: ["websocket"]
+});
+
 const chatBox = document.getElementById('chat-box');
 const input = document.getElementById('msg-input');
 
