@@ -91,3 +91,18 @@ input[type="text"], input[type="password"] {
   margin-bottom: 10px;
   font-size: 14px;
 }
+
+
+@media (max-width: 400px) {
+  form {
+    padding: 20px;
+  }
+
+  .msg {
+    font-size: 14px;
+  }
+
+  button, input[type="text"] {
+    font-size: 14px;
+  }
+}

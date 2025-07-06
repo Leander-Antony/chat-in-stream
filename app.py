@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 from flask_socketio import SocketIO, send
 import uuid
+import eventlet
+eventlet.monkey_patch()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -35,4 +37,4 @@ def handleMessage(data):
     send(data, broadcast=True)
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    socketio.run(app, host='0.0.0.0', port=5000)
